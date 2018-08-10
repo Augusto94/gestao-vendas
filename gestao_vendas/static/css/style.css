@@ -1,0 +1,64 @@
+/*!
+ * Start Bootstrap - Full Width Pics (https://startbootstrap.com/template-overviews/full-width-pics)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-full-width-pics/blob/master/LICENSE)
+ */
+
+ .bg-dark {
+  background-color: #10505a!important;
+}
+
+/* .py-5 {
+  padding-top: 10rem!important;
+} */
+
+.custom-fixed-top {
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.custom-footer {
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  padding-bottom: 1rem!important;
+  padding-top: 1rem!important;
+  background-color: #10505a!important;
+}
+
+.bg-image-full {
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.box {
+  width: 500px;
+  margin: 200px 0;
+}
+
+.text-info {
+  color: #3b4446!important;
+}
+
+.back-login {
+  background-image: linear-gradient(to left top, #78969426, #9bcad296, #1c9db557, #31a4bb87, #78c2d238);
+  height: 100vh;
+}
+#login .container #login-row #login-column .login-box {
+  margin-top: 80px;
+  max-width: 600px;
+  height: 320px;
+  border: 1px solid #9C9C9C;
+  background-image: linear-gradient(to bottom, #aec1c3, #a9b5b7, #bcc5c6, #cfd5d5, #e3e5e5);
+}
+#login .container #login-row #login-column .login-box #login-form {
+  padding: 20px;
+}
+#login .container #login-row #login-column .login-box #login-form #register-link {
+  margin-top: -85px;
+}
