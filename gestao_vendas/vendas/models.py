@@ -1,6 +1,7 @@
 from django.db import models
-from datetime import datetime
+from datetime import datetime, timedelta
 import django
+import pytz
 
 # Create your models here.
 class Cliente(models.Model):
@@ -15,7 +16,7 @@ class Cliente(models.Model):
 
 
 class Venda(models.Model):
-    data = models.DateTimeField(default=django.utils.timezone.now(), blank=True)
+    data = models.DateTimeField(default=datetime.now(tz=pytz.timezone('America/Sao_Paulo')), blank=True)
     peso = models.IntegerField(blank=True)
 
     ATIVA = 'ATIVA'
@@ -35,4 +36,8 @@ class Venda(models.Model):
     cliente = models.ForeignKey(Cliente, on_delete=models.PROTECT)
 
     def __str__(self):
-        return self.cliente.apelido + " " + str(self.data)
+        return (self.cliente.apelido +
+               " " +
+               str((self.data - timedelta(minutes=3*60)).date()) +
+               " " +
+               str((self.data - timedelta(minutes=3*60)).time()))
