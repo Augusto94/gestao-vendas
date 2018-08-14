@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+
+{% block content %}
+    <!-- <ul class="list-group">
+        {% for venda in vendas %}
+            <li class="list-group-item">
+                {{ venda.cliente.apelido }} {{ venda.data }} {{ venda.peso }} {{ venda.valor }}
+            </li>
+        {% endfor %}
+    </ul> -->
+    <table class="table">
+            <thead>
+              <tr>
+                <th>Cliente</th>
+                <th>Horário</th>
+                <th>Peso</th>
+                <th>Valor Recebido</th>
+                <th>Valor da Comissão</th>
+              </tr>
+            </thead>
+            <tbody>
+            {% for venda in vendas %}
+                <tr>
+                    <td>{{ venda.cliente }}</td>
+                    <td>{{ venda.data }}</td>
+                    <td>{{ venda.peso }}</td>
+                    <td>{{ venda.valor }}</td>
+                    <td>{{ venda.comissao }}</td>
+                    <td>
+                        <a href="{% url 'update_venda' venda.id %}">
+                            <i class="far fa-edit"></i>
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+          </table>
+{% endblock %}
